@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="live_feed=true" label="Test Table" max_length="40" name="x_287991_test_table" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="New Choice" max_length="40" name="u_choice_2" type="string">
+            <choice/>
+        </element>
+        <element label="New Decimal" max_length="15" name="u_decimal_3" type="decimal"/>
+        <element label="New File Attachment" max_length="40" name="u_file_attachment_2" type="file_attachment"/>
+        <element label="New Icon" max_length="100" name="u_icon_1" type="icon"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="New List" max_length="1024" name="u_list_1" type="glide_list"/>
+        <element default="4d38b7111b121100763d91eebc0713ee" label="New Reference" mandatory="true" max_length="32" name="u_reference_4" reference="core_country" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="New String" max_length="11" name="u_string_5" type="string"/>
+        <index name="index">
+            <element name="u_reference_4"/>
+        </index>
+        <index name="index2">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

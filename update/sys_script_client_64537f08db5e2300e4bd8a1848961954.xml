@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>sys_class_name</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Keypress</name>
+        <order/>
+        <script><![CDATA[function onLoad()
+{
+	g_form.getControl('u_string_5').observe('keypress',function(evt) {
+
+//alert(evt.value);
+	fetch('https://jsonplaceholder.typicode.com/users').then(function(a){return a.json()}).then(function(a){
+		g_form.clearOptions("u_choice_2");
+		for(var i=0;i<a.length;i++){
+			g_form.addOption("u_choice_2",a[i].id,a[i].name);
+		}
+
+	
+	
+	});
+
+
+   });
+
+	
+	
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-12-06 08:41:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>64537f08db5e2300e4bd8a1848961954</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Keypress</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Test" source="x_287991_test">f8745b3bdb422300e4bd8a184896192e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Test">f8745b3bdb422300e4bd8a184896192e</sys_scope>
+        <sys_update_name>sys_script_client_64537f08db5e2300e4bd8a1848961954</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-12-06 10:03:48</sys_updated_on>
+        <table>x_287991_test_table</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
